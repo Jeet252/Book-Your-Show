@@ -1,0 +1,37 @@
+.booking-navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+}
+.b-nav-title {
+  margin: 0 0;
+  grid-column: 1;
+}
+.b-nav-title p {
+  margin: 3px 0;
+}
+.b-nav-title-cinemaname {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.b-nav-btns {
+  grid-column: 2;
+  justify-self: end;
+  align-self: center;
+  display: flex;
+  align-items: center;
+}
+.b-nav-edit-tickect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 40px;
+  height: 1.9rem;
+  border-radius: 5px;
+  width: 7rem;
+  border: 1px solid black;
+  background-color: transparent;
+}

@@ -1,24 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './Screen/Home';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import MovieDetail from './Screen/MovieDetail';
+import DataState from './Context/DataState'
+import Cinemas from './Screen/Cinemas';
+import BookingArea from './Screen/BookingArea';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DataState>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Home />} path='/' />
+          <Route element={<MovieDetail />} path='/moviedetail' />
+          <Route element={<Cinemas />} path='/moviesdetail/cinemaselection' />
+          <Route element={<BookingArea />} path='/moviesdetail/cinemaselection/bookingtickets' />
+
+        </Routes>
+      </BrowserRouter>
+    </DataState>
   );
 }
 

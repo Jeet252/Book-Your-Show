@@ -1,0 +1,41 @@
+.cast-container {
+  position: relative;
+}
+.cast-profile-header {
+  margin: 10px;
+}
+.cast-profiles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.cp-btn {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+.c-p-left-btn {
+  left: -30px;
+}
+.c-p-right-btn {
+  right: 0;
+}
+.profile-above {
+  position: absolute;
+}
+.profile-below {
+  width: 100%;
+  display: flex;
+}
+.profile-image-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.profile-image {
+  width: 10rem;
+  margin: 10px;
+  border-radius: 50%;
+}

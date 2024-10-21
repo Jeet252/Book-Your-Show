@@ -1,0 +1,13 @@
+.more-detail {
+  width: 80%;
+  background-color: rgba(245, 245, 220, 0);
+  padding-left: 75px;
+}
+
+.more-detail h2 {
+  padding: 25px 0;
+}
+
+.more-detail hr {
+  margin-top: 25px;
+}

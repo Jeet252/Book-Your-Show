@@ -1,0 +1,35 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  width: 14rem;
+  margin: 0 10px;
+  transition: 0.3s ease;
+}
+.card-img {
+  height: 22rem;
+}
+.card-movie-img {
+  height: 22rem;
+  width: 14rem;
+  object-fit: cover;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.card-movie-rating {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  background-color: black;
+  color: white;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.card-movie-name {
+  margin: 10px 5px;
+}
+.card-genre {
+  margin: 0 5px;
+}
+.card-container:hover {
+  transform: scale(1.05);
+}

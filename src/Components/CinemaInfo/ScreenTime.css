@@ -1,0 +1,53 @@
+.time-container {
+  margin: 0 10px;
+  align-self: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.seat-price-hover {
+  position: absolute;
+  bottom: 110%;
+  height: 4rem;
+  background-color: white;
+  box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+  padding: 3px 15px;
+}
+.time-box {
+  height: 2.5rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.767);
+  border-radius: 5px;
+}
+.time-box a {
+  text-decoration: none;
+  padding: 10px;
+  color: rgba(11, 167, 11, 0.705);
+}
+.seat-price-hover div {
+  display: flex;
+}
+.seat-price-hover div li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hover-price {
+  font-size: 0.9rem;
+  margin: 2px;
+}
+.hover-class {
+  font-size: 0.7rem;
+  margin: 2px;
+}
+.hover-available {
+  font-size: 0.8rem;
+  margin: 2px;
+  color: rgba(0, 128, 0, 0.589);
+}

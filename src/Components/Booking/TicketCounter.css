@@ -1,0 +1,85 @@
+.ticket-counter-container {
+  background-color: rgba(0, 0, 0, 0.329);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+}
+.ticket-counter-inner-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 20px;
+}
+.ticket-counter-h5 {
+  margin: 10px 0;
+  font-size: 1.25rem;
+}
+.t-c-c-img-collection {
+  width: 10rem;
+  height: 10rem;
+  position: relative;
+  margin: 15px;
+}
+.t-c-c-img {
+  width: 10rem;
+  position: absolute;
+  background-color: white;
+}
+.no-of-ticket-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.no-of-tickets {
+  cursor: pointer;
+  list-style: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.438);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
+  margin: 10px;
+}
+.ticket-counter-hr {
+  width: 100%;
+  border: none;
+  margin: 10px 0 20px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  opacity: 0.5;
+}
+.t-c-li {
+  flex-direction: column;
+}
+.t-c-li-price {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.t-c-li-class {
+  font-size: 0.7rem;
+}
+.t-c-li-available {
+  font-size: 0.8rem;
+  color: rgba(0, 128, 0, 0.589);
+}
+.t-c-btn {
+  height: 2.5rem;
+  width: 10rem;
+  font-size: 1.5rem;
+  margin-top: 15px;
+  background-color: #f84464;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+}
+.t-c-btn:hover {
+  background-color: #bd1c3a;
+}

@@ -1,0 +1,28 @@
+.booking-header {
+  width: 100%;
+  position: fixed;
+  top: 64px;
+}
+.b-h-ele1 {
+  margin: 20px 100px;
+  display: flex;
+}
+.booking-header li {
+  list-style: none;
+  height: 2.25rem;
+  width: 5rem;
+  display: flex;
+  margin: 0 5px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid green;
+  color: green;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.486);
+}
+.b-h-hr {
+  color: rgb(0 0 0 / 50%);
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  opacity: 0.3;
+}

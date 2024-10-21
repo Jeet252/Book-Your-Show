@@ -1,0 +1,36 @@
+.items-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.movie-container {
+  margin: 10px auto;
+  display: flex;
+  width: 94.5%;
+  overflow: hidden;
+}
+.cards-container {
+  display: flex;
+  transition: 1s ease;
+}
+.home-text {
+  margin: 1pc 4pc;
+}
+.items-container button {
+  position: absolute;
+  margin: auto 0px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+.movies-container-left-btn {
+  left: 0px;
+  z-index: 2;
+}
+.movies-container-right-btn {
+  right: 0px;
+  z-index: 2;
+}
+.items-container button:hover {
+  background-color: rgba(0, 0, 0, 0.274);
+}

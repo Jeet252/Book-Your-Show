@@ -1,0 +1,24 @@
+.cinema-info-container {
+  display: flex;
+  background: #ffffffc4;
+  margin: 1px 5px;
+  border-radius: 6px;
+}
+.cinema-basic-inf0 {
+  width: 20rem;
+  height: 4rem;
+  margin: 15px 50px;
+}
+.header-cinema-name {
+  margin-bottom: 10px;
+}
+.m-ticket {
+  color: green;
+  margin-right: 10px;
+  font-size: 0.8rem;
+}
+.food-beverages {
+  color: orange;
+  margin-left: 10px;
+  font-size: 0.8rem;
+}

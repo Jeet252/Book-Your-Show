@@ -1,0 +1,21 @@
+.search-result {
+  position: absolute;
+  background-color: white;
+  max-height: 300px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 16rem;
+  margin: 10px 0;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+  overflow-y: scroll;
+}
+.search-result::-webkit-scrollbar {
+  display: none;
+}
+.search-result div {
+  padding: 7px 10px;
+}
+.search-result div:hover {
+  background-color: #e4e0e1;
+}

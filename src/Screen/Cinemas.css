@@ -1,0 +1,24 @@
+.cinema-header {
+  background-color: #ffffffc4;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.cinema-section-movieName {
+  font-size: 2.5rem;
+  margin: 10px;
+}
+
+.cinema-section-certificate {
+  border: 1px solid grey;
+  border-radius: 50%;
+  padding: 3px;
+  margin: 10px 10px;
+  font-size: 0.9rem;
+}
+.cinema-section-genre {
+  margin: 10px 5px;
+  padding: 3px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}

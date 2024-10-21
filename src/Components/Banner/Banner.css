@@ -1,0 +1,56 @@
+.banner-container {
+  width: 100%;
+  height: 30rem;
+  display: flex;
+  background: no-repeat;
+  background-size: cover;
+  align-items: center;
+  color: white;
+}
+.banner-content {
+  display: flex;
+  flex-direction: row;
+  margin-left: 60px;
+}
+.bannercard-detail {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0 0 60px;
+}
+.banner-movie-name {
+  font-size: 2.5rem;
+  padding: 0 0px 15px 0;
+}
+.banner-movie-rating {
+  font-size: 1.5rem;
+  padding: 0 0px 15px 0;
+}
+.banner-card-movie-language {
+  font-size: 1.25rem;
+  padding: 0 0px 15px 0;
+}
+.banner-card-detail-unorderedlist {
+  display: flex;
+  font-size: 1.25rem;
+  margin: 0;
+}
+.banner-card-detail-unorderedlist li {
+  list-style: none;
+  margin: 0 10px;
+}
+.banner-btn {
+  height: 3rem;
+  width: 12rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #f84464;
+  margin: 30px 0;
+  font-size: 1.25rem;
+}
+.banner-btn a {
+  color: white;
+  text-decoration: none;
+}
+.banner-btn:hover {
+  background-color: #db2547;
+}
