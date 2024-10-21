@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Jeet252/Book-Your-Show/static/css/main.cf8e0754.css",
-    "main.js": "/Jeet252/Book-Your-Show/static/js/main.5cef663d.js",
-    "static/js/592.918a8bb2.chunk.js": "/Jeet252/Book-Your-Show/static/js/592.918a8bb2.chunk.js",
-    "static/media/motorcycle.png": "/Jeet252/Book-Your-Show/static/media/motorcycle.b43a93d3abe787edfb10.png",
-    "static/media/bicycle.png": "/Jeet252/Book-Your-Show/static/media/bicycle.1869244a6fbff0d84e67.png",
-    "static/media/rickshaw.png": "/Jeet252/Book-Your-Show/static/media/rickshaw.80c0dab71cf062d0adae.png",
-    "static/media/sport-car.png": "/Jeet252/Book-Your-Show/static/media/sport-car.19be252807da6a4854b0.png",
-    "static/media/car.png": "/Jeet252/Book-Your-Show/static/media/car.0f8572c661d05f031d91.png",
-    "static/media/school-bus.png": "/Jeet252/Book-Your-Show/static/media/school-bus.4ebfdb8f8ddeaa9f57d5.png",
-    "index.html": "/Jeet252/Book-Your-Show/index.html",
-    "main.cf8e0754.css.map": "/Jeet252/Book-Your-Show/static/css/main.cf8e0754.css.map",
-    "main.5cef663d.js.map": "/Jeet252/Book-Your-Show/static/js/main.5cef663d.js.map",
-    "592.918a8bb2.chunk.js.map": "/Jeet252/Book-Your-Show/static/js/592.918a8bb2.chunk.js.map"
+    "main.css": "/Book-Your-Show/static/css/main.cf8e0754.css",
+    "main.js": "/Book-Your-Show/static/js/main.2033f87b.js",
+    "static/js/592.918a8bb2.chunk.js": "/Book-Your-Show/static/js/592.918a8bb2.chunk.js",
+    "static/media/motorcycle.png": "/Book-Your-Show/static/media/motorcycle.b43a93d3abe787edfb10.png",
+    "static/media/bicycle.png": "/Book-Your-Show/static/media/bicycle.1869244a6fbff0d84e67.png",
+    "static/media/rickshaw.png": "/Book-Your-Show/static/media/rickshaw.80c0dab71cf062d0adae.png",
+    "static/media/sport-car.png": "/Book-Your-Show/static/media/sport-car.19be252807da6a4854b0.png",
+    "static/media/car.png": "/Book-Your-Show/static/media/car.0f8572c661d05f031d91.png",
+    "static/media/school-bus.png": "/Book-Your-Show/static/media/school-bus.4ebfdb8f8ddeaa9f57d5.png",
+    "index.html": "/Book-Your-Show/index.html",
+    "main.cf8e0754.css.map": "/Book-Your-Show/static/css/main.cf8e0754.css.map",
+    "main.2033f87b.js.map": "/Book-Your-Show/static/js/main.2033f87b.js.map",
+    "592.918a8bb2.chunk.js.map": "/Book-Your-Show/static/js/592.918a8bb2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cf8e0754.css",
-    "static/js/main.5cef663d.js"
+    "static/js/main.2033f87b.js"
   ]
 }
