@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Book-Your-Show/static/css/main.cf8e0754.css",
-    "main.js": "/Book-Your-Show/static/js/main.000676e2.js",
+    "main.js": "/Book-Your-Show/static/js/main.0ca92dd9.js",
     "static/js/592.918a8bb2.chunk.js": "/Book-Your-Show/static/js/592.918a8bb2.chunk.js",
     "static/media/motorcycle.png": "/Book-Your-Show/static/media/motorcycle.b43a93d3abe787edfb10.png",
     "static/media/bicycle.png": "/Book-Your-Show/static/media/bicycle.1869244a6fbff0d84e67.png",
@@ -11,11 +11,11 @@
     "static/media/school-bus.png": "/Book-Your-Show/static/media/school-bus.4ebfdb8f8ddeaa9f57d5.png",
     "index.html": "/Book-Your-Show/index.html",
     "main.cf8e0754.css.map": "/Book-Your-Show/static/css/main.cf8e0754.css.map",
-    "main.000676e2.js.map": "/Book-Your-Show/static/js/main.000676e2.js.map",
+    "main.0ca92dd9.js.map": "/Book-Your-Show/static/js/main.0ca92dd9.js.map",
     "592.918a8bb2.chunk.js.map": "/Book-Your-Show/static/js/592.918a8bb2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cf8e0754.css",
-    "static/js/main.000676e2.js"
+    "static/js/main.0ca92dd9.js"
   ]
 }
