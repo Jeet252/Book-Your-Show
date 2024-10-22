@@ -8,7 +8,7 @@ import dataContext from "../Context/dataContext";
 import Footer from "../Components/Footer";
 
 export default function Home() {
-    const { profile } = useContext(dataContext);
+    const { moviesDetails } = useContext(dataContext);
     const [translate, setTranslate] = useState({
         time: 0,
         transition: 0,
@@ -50,7 +50,7 @@ export default function Home() {
                         className="cards-container"
                         style={{ translate: translate.transition + "%" }}
                     >
-                        {profile.map((elem, i) => (
+                        {moviesDetails.map((elem, i) => (
                             <Card key={i} name={elem} />
                         ))}
                     </div>

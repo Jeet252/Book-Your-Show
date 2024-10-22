@@ -29,7 +29,12 @@ export default function Card({ name }) {
                 {name.rating}
             </span>
             <h4 className="card-movie-name">{name.movieName}</h4>
-            <span className="card-genre">Genre</span>
+            <div>
+                {name.genre.map((elem) => (
+                    <span className="card-genre">{elem}</span>
+                ))}
+            </div>
+
         </div>
     );
 }

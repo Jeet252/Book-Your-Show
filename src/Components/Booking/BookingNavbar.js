@@ -1,16 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./BookingNavbar.css";
 import { IoMdClose } from "react-icons/io";
 import { FaPencilAlt } from "react-icons/fa";
 export default function BookingNavbar({ setTicketbtn, ticketbtn, details }) {
-    useEffect(() => {
-        console.log(details)
-    })
     return (
         <nav className="booking-navbar">
             <div className="b-nav-title">
                 <p className="b-nav-title-moviename">{details.movieName}</p>
-                <p className="b-nav-title-cinemaname">{details.cinemaHallName}</p>
+                <p className="b-nav-title-cinemaname">{details.name}</p>
             </div>
             <div className="b-nav-btns">
                 <div>

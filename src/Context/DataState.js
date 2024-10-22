@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import DataContext from "./dataContext";
-import profile from '../Data/profile'
+import moviesDetails from '../Data/moviesDetails'
 
 const DataState = (props) => {
     const [movieData, setMovieData] = useState({})
     const [forBooking, setForBooking] = useState({});
 
     return (
-        <DataContext.Provider value={{ movieData, setMovieData, profile, forBooking, setForBooking }}>
+        <DataContext.Provider value={{ movieData, setMovieData, moviesDetails, forBooking, setForBooking }}>
             {props.children}
         </DataContext.Provider>
     )

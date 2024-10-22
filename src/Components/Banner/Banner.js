@@ -25,7 +25,7 @@ export default function Banner({ MovieDetail }) {
                         <li>• Certificate</li>
                     </ul>
                     <button className="banner-btn" >
-                        <Link to='/moviesdetail/cinemaselection' >Book tickets</Link>
+                        <Link to='/cinemaselection' >Book tickets</Link>
                     </button>
 
                 </div>

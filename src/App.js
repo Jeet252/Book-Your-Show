@@ -9,12 +9,12 @@ import BookingArea from './Screen/BookingArea';
 function App() {
   return (
     <DataState>
-      <BrowserRouter>
+      <BrowserRouter >
         <Routes>
-          <Route element={<Home />} path='/' />
+          <Route element={<Home />} path='/Book-Your-Show' />
           <Route element={<MovieDetail />} path='/moviedetail' />
-          <Route element={<Cinemas />} path='/moviesdetail/cinemaselection' />
-          <Route element={<BookingArea />} path='/moviesdetail/cinemaselection/bookingtickets' />
+          <Route element={<Cinemas />} path='/cinemaselection' />
+          <Route element={<BookingArea />} path='/bookingtickets' />
 
         </Routes>
       </BrowserRouter>

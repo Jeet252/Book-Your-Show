@@ -5,7 +5,7 @@ export default function SearchResult({ result }) {
     return (
         <div className='search-result'>
             {result.map((items, index) => (
-                <div key={index} >{items.name}</div>
+                <div key={index} >{items.name || items.movieName}</div>
             ))}
         </div>
     )

@@ -3,11 +3,13 @@ import "./Cinemas.css";
 import Navbar from "../Components/Navbar";
 import CinemaName from "../Components/CinemaInfo/CinemaName";
 import dataContext from "../Context/dataContext";
+import cinemaDetails from '../Data/cinemaDetails'
 
 export default function Cinemas() {
     const { setForBooking } = useContext(dataContext);
     const movie = JSON.parse(localStorage.getItem("Movie-Detail"));
-    const cinema = movie.cinemaHalls;
+    const cinema = cinemaDetails.filter((elem) => JSON.stringify(elem.show).includes(movie.movieName));
+
     return (
         <div>
             <Navbar />

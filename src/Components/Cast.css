@@ -36,6 +36,8 @@
 }
 .profile-image {
   width: 10rem;
+  height: 10rem;
+  object-fit: cover;
   margin: 10px;
   border-radius: 50%;
 }

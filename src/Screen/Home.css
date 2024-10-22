@@ -6,6 +6,8 @@
 .movie-container {
   margin: 10px auto;
   display: flex;
+  height: 30rem;
+  align-items: center;
   width: 94.5%;
   overflow: hidden;
 }
