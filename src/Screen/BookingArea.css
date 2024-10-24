@@ -1,3 +1,6 @@
+.booking-area-container {
+  position: relative;
+}
 .booking-bottom {
   position: fixed;
   bottom: 0px;
@@ -6,8 +9,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.575);
+  background-color: rgb(255, 255, 255);
 }
+
 .booking-bottom span {
   height: 1rem;
   width: 1rem;
@@ -17,4 +21,26 @@
 }
 .bb-selected {
   background-color: green;
+}
+.ticket-price-paying-container {
+  height: 4.5rem;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0 0 8px #000000c2;
+}
+.ticket-price-paying-content {
+  display: flex;
+}
+.price-btn {
+  padding: 8px 65px;
+  font-size: 1.1rem;
+  color: white;
+  background-color: rgb(211, 0, 35);
+  border-radius: 10px;
+  border: none;
 }

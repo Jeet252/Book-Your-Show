@@ -14,9 +14,11 @@
 .search-result::-webkit-scrollbar {
   display: none;
 }
-.search-result div {
+.search-result a {
   padding: 7px 10px;
+  text-decoration: none;
+  color: black;
 }
-.search-result div:hover {
+.search-result a:hover {
   background-color: #e4e0e1;
 }

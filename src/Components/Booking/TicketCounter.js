@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./TicketCounter.css";
 import seat from "./seat";
 
-export default function TicketCounter({ setTicketbtn, ticketbtn }) {
+export default function TicketCounter({ setTicket, ticket }) {
   const [hover, setHover] = useState({
     clicked: 3,
     hovered: 0,
@@ -10,7 +10,7 @@ export default function TicketCounter({ setTicketbtn, ticketbtn }) {
   return (
     <div
       className="ticket-counter-container"
-      style={{ display: ticketbtn.display ? "flex" : "none" }}
+      style={{ display: ticket.display ? "flex" : "none" }}
     >
       <div>
         <div className="ticket-counter-inner-container">
@@ -45,7 +45,8 @@ export default function TicketCounter({ setTicketbtn, ticketbtn }) {
             <span className="t-c-li-price">price</span>
             <span className="t-c-li-available">available</span>
           </li>
-          <button className="t-c-btn" onClick={() => setTicketbtn({
+          <button className="t-c-btn" onClick={() => setTicket({
+            ...ticket,
             display: false,
             no_tickets: hover.clicked
           })}>button</button>

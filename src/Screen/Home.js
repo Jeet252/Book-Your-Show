@@ -24,7 +24,6 @@ export default function Home() {
     };
 
     const handleRightClick = () => {
-        console.log(translate.time)
         if (translate.time < 2) {
             setTranslate({
                 ...translate,

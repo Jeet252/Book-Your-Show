@@ -2,7 +2,7 @@ import React from "react";
 import "./BookingNavbar.css";
 import { IoMdClose } from "react-icons/io";
 import { FaPencilAlt } from "react-icons/fa";
-export default function BookingNavbar({ setTicketbtn, ticketbtn, details }) {
+export default function BookingNavbar({ setTicket, ticket, details }) {
     return (
         <nav className="booking-navbar">
             <div className="b-nav-title">
@@ -14,13 +14,13 @@ export default function BookingNavbar({ setTicketbtn, ticketbtn, details }) {
                     <button
                         className="b-nav-edit-tickect"
                         onClick={() =>
-                            setTicketbtn({
-                                ...ticketbtn,
+                            setTicket({
+                                ...ticket,
                                 display: true,
                             })
                         }
                     >
-                        {ticketbtn.no_tickets} Tickets{" "}
+                        {ticket.no_tickets} Tickets{" "}
                         <FaPencilAlt size={14} style={{ marginLeft: "15px" }} />
                     </button>
                 </div>

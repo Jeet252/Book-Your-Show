@@ -1,0 +1,63 @@
+.thaters-header {
+  background-color: white;
+  padding: 15px 0px 10px 30px;
+}
+.thaters-header h2 {
+  margin-bottom: 5px;
+}
+.thater-mticket {
+  color: green;
+  font-size: 0.8rem;
+  margin-right: 10px;
+}
+.thater-foodbaverages {
+  color: orange;
+  font-size: 0.8rem;
+}
+.thater-movies-list {
+  margin: 20px 0;
+}
+.movies-list-movie {
+  margin: 1px 5px;
+  border-radius: 8px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  height: 8rem;
+}
+.movies-list-movie div {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto 1fr 1fr;
+  grid-template-areas: "movie-list-movieimg movies-list-moviename movies-list-movietime";
+}
+.movies-list-moviename {
+  margin-left: 20px;
+  align-self: center;
+}
+.movies-list-movietime {
+  justify-self: center;
+  align-self: center;
+  color: green;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 5rem;
+  border: 1px solid green;
+  border-radius: 5px;
+}
+.movie-list-movieimg {
+  margin-left: 10px;
+  height: 6rem;
+  width: 4rem;
+  border-radius: 5px;
+}
+.movies-list-moviename-name {
+  margin-bottom: 10px;
+}
+.movies-list-moviename-genre span {
+  border: 1px solid black;
+  margin: 0 5px;
+  border-radius: 5px;
+}

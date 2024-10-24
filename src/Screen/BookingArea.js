@@ -3,22 +3,53 @@ import "./BookingArea.css";
 import BookingNavbar from "../Components/Booking/BookingNavbar";
 import BookingHeader from "../Components/Booking/BookingHeader";
 import TicketCounter from "../Components/Booking/TicketCounter";
+import SeatArea from "../Components/Booking/SeatArea";
 
 export default function BookingArea() {
-    const Cinema_Details = JSON.parse(localStorage.getItem("Cinema-Detail"))
-    const [ticketbtn, setTicketbtn] = useState({
-        display: false,
-        no_tickets: 3
-    })
-    return (
-        <div>
-            <BookingNavbar details={Cinema_Details} setTicketbtn={setTicketbtn} ticketbtn={ticketbtn} />
-            <BookingHeader details={Cinema_Details} />
-            <div className="booking-bottom">
-                <span className="bb-available"></span>Available{" "}
-                <span className="bb-selected"></span>Selected
-            </div>
-            <TicketCounter setTicketbtn={setTicketbtn} ticketbtn={ticketbtn} />
+  const Cinema_Details = JSON.parse(localStorage.getItem("Cinema-Detail"));
+
+  const [ticket, setTicket] = useState({
+    movieName: Cinema_Details.movieName,
+    cinemaName: Cinema_Details.name,
+    display: false,
+    no_tickets: 3,
+    selectedTickets: 0,
+    ticket_no: [],
+  });
+
+  return (
+    <div className="booking-area-container">
+      <BookingNavbar
+        details={Cinema_Details}
+        setTicket={setTicket}
+        ticket={ticket}
+      />
+      <BookingHeader details={Cinema_Details} />
+
+      <SeatArea setTicket={setTicket} ticket={ticket} />
+
+      <TicketCounter setTicket={setTicket} ticket={ticket} />
+      <div
+        className="booking-bottom"
+        style={{
+          display:
+            ticket.no_tickets !== ticket.selectedTickets ? "flex" : "none",
+        }}
+      >
+        <span className="bb-available"></span>Available{" "}
+        <span className="bb-selected"></span>Selected
+      </div>
+      <div
+        className="ticket-price-paying-container"
+        style={{
+          display:
+            ticket.no_tickets === ticket.selectedTickets ? "flex" : "none",
+        }}
+      >
+        <div className="ticket-price-paying-content">
+          <button className="price-btn">Price</button>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
