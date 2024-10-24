@@ -1,0 +1,40 @@
+.seating-arrangement-container {
+  display: grid;
+  margin: 0 19px 40px 20px;
+}
+
+.seatarea-price {
+  margin: 10px;
+}
+
+.seatarea-hr {
+  width: 100%;
+}
+.seat-arrangement {
+  width: 100%;
+}
+.total-seats {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+.seat-colum {
+  justify-self: center;
+}
+.seat-colum-name {
+  height: 1.5rem;
+  width: 1.5rem;
+  justify-self: start;
+}
+.seat-btn {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.seat-btn:hover {
+  background-color: rgba(0, 128, 0, 0.7);
+  color: rgb(255, 255, 255);
+}

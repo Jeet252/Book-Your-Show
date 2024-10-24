@@ -1,0 +1,6 @@
+.seatarea-container {
+  display: grid;
+  align-items: center;
+  padding: 15px 70px 40px 70px;
+  background-color: #ffffffc7;
+}
