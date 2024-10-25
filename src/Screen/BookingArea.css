@@ -38,6 +38,7 @@
 }
 .price-btn {
   padding: 8px 65px;
+  text-decoration: none;
   font-size: 1.1rem;
   color: white;
   background-color: rgb(211, 0, 35);

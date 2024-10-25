@@ -17,7 +17,8 @@ export default function ScreenTime({ timing, details, setForBooking }) {
           ))}
         </div>
       </div>
-      <li
+      <Link
+        to="/bookingtickets"
         className="time-box"
         onClick={() => {
           setForBooking(details);
@@ -26,8 +27,8 @@ export default function ScreenTime({ timing, details, setForBooking }) {
         onMouseEnter={() => setHover("flex")}
         onMouseLeave={() => setHover("none")}
       >
-        <Link to="/bookingtickets">{timing.time}</Link>
-      </li>
+        {timing.time}
+      </Link>
     </div>
   );
 }

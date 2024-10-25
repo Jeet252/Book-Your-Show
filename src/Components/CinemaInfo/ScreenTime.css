@@ -23,11 +23,13 @@
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.767);
   border-radius: 5px;
-}
-.time-box a {
   text-decoration: none;
-  padding: 10px;
   color: rgba(11, 167, 11, 0.705);
+  transition: 0.5s ease;
+}
+.time-box:hover {
+  background-color: green;
+  color: rgba(255, 255, 255, 0.705);
 }
 .seat-price-hover div {
   display: flex;

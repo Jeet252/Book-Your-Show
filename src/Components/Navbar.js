@@ -10,6 +10,7 @@ import logo from "../assests/file.png";
 
 export default function Navbar() {
   const search_details = [...cinemaDetails, ...moviedetails];
+  const data = JSON.parse(localStorage.getItem("Total-tickets"));
   return (
     <nav className="navbar">
       <ul className="navbar-logo">
@@ -24,7 +25,7 @@ export default function Navbar() {
         <Link to={""} className="navbar-yourbooking">
           <TiTicket />
           Your Booking
-          <li className="navbar-yourbooking-no">0</li>
+          <li className="navbar-yourbooking-no">{data.ticket_no.length}</li>
         </Link>
       </ul>
     </nav>

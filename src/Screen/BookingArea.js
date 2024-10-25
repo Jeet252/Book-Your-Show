@@ -4,6 +4,7 @@ import BookingNavbar from "../Components/Booking/BookingNavbar";
 import BookingHeader from "../Components/Booking/BookingHeader";
 import TicketCounter from "../Components/Booking/TicketCounter";
 import SeatArea from "../Components/Booking/SeatArea";
+import { Link } from "react-router-dom";
 
 export default function BookingArea() {
   const Cinema_Details = JSON.parse(localStorage.getItem("Cinema-Detail"));
@@ -11,14 +12,17 @@ export default function BookingArea() {
   const [ticket, setTicket] = useState({
     movieName: Cinema_Details.movieName,
     cinemaName: Cinema_Details.name,
-    date: new Date.getDate(),
+    date: `${new Date().getDate()}/${new Date().getMonth() + 1}`,
     show: "",
     display: false,
     no_tickets: 3,
     selectedTickets: 0,
     ticket_no: [],
   });
-
+  const handleclick = () => {
+    localStorage.setItem("Total-tickets", JSON.stringify(ticket));
+    alert("Your Ticket is Successfully Booked");
+  };
   return (
     <div className="booking-area-container">
       <BookingNavbar
@@ -53,14 +57,13 @@ export default function BookingArea() {
         }}
       >
         <div className="ticket-price-paying-content">
-          <button
+          <Link
+            to="/Book-Your-Show"
             className="price-btn"
-            onClick={() =>
-              localStorage.setItem("Total-tickets", JSON.stringify(ticket))
-            }
+            onClick={() => handleclick()}
           >
             Price
-          </button>
+          </Link>
         </div>
       </div>
     </div>
