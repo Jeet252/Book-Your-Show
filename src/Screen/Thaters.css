@@ -46,6 +46,8 @@
   width: 5rem;
   border: 1px solid green;
   border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
 .movie-list-movieimg {
   margin-left: 10px;
@@ -54,10 +56,33 @@
   border-radius: 5px;
 }
 .movies-list-moviename-name {
-  margin-bottom: 10px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  color: black;
+  position: relative;
 }
 .movies-list-moviename-genre span {
   border: 1px solid black;
   margin: 0 5px;
   border-radius: 5px;
+}
+.movies-list-moviename-genre {
+  margin-top: 10px;
+}
+.movies-list-moviename-name::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: black;
+  transition: width 0.3s ease-in-out;
+}
+.movies-list-moviename-name:hover::before {
+  width: 100%;
+}
+.movies-list-movietime:hover {
+  color: white;
+  background-color: green;
 }

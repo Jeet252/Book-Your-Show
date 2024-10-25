@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 export default function SearchResult({ result }) {
   const handleNavigate = (items) => {
-    if (items.type === "/moviedetails") {
+    if (items.type === "/moviedetail") {
+      console.log(items);
       localStorage.setItem("Movie-Detail", JSON.stringify(items));
     } else if (items.type === "/thaterinfo") {
       localStorage.setItem("Thater-info", JSON.stringify(items));

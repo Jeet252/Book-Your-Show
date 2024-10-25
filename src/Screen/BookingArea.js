@@ -11,6 +11,8 @@ export default function BookingArea() {
   const [ticket, setTicket] = useState({
     movieName: Cinema_Details.movieName,
     cinemaName: Cinema_Details.name,
+    date: new Date.getDate(),
+    show: "",
     display: false,
     no_tickets: 3,
     selectedTickets: 0,
@@ -24,7 +26,11 @@ export default function BookingArea() {
         setTicket={setTicket}
         ticket={ticket}
       />
-      <BookingHeader details={Cinema_Details} />
+      <BookingHeader
+        details={Cinema_Details}
+        setTicket={setTicket}
+        ticket={ticket}
+      />
 
       <SeatArea setTicket={setTicket} ticket={ticket} />
 
@@ -47,7 +53,14 @@ export default function BookingArea() {
         }}
       >
         <div className="ticket-price-paying-content">
-          <button className="price-btn">Price</button>
+          <button
+            className="price-btn"
+            onClick={() =>
+              localStorage.setItem("Total-tickets", JSON.stringify(ticket))
+            }
+          >
+            Price
+          </button>
         </div>
       </div>
     </div>

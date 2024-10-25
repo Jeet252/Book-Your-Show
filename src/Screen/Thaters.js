@@ -4,10 +4,15 @@ import Footer from "../Components/Footer";
 import data from "../Data/moviesDetails";
 import { FaMobileAlt } from "react-icons/fa";
 import { IoFastFoodOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 export default function Thaters() {
   const thaterDetails = JSON.parse(localStorage.getItem("Thater-info"));
-  console.log(thaterDetails);
+
+  const handleclick = (a) => {
+    const cinemaDetails = { ...thaterDetails, movieName: a };
+    localStorage.setItem("Cinema-Detail", JSON.stringify(cinemaDetails));
+  };
   return (
     <div className="thaters-container">
       <Navbar />
@@ -32,8 +37,8 @@ export default function Thaters() {
           <div className="movies-list-movie" key={i}>
             {data
               .filter((details) => details.name === elem.movieName)
-              .map((details) => (
-                <div>
+              .map((details, index) => (
+                <div key={index}>
                   <img
                     className="movie-list-movieimg"
                     src={details.imageUrl}
@@ -41,15 +46,25 @@ export default function Thaters() {
                   />
 
                   <ul className="movies-list-moviename">
-                    <li className="movies-list-moviename-name">
+                    <Link
+                      to={"/bookingtickets"}
+                      onClick={() => handleclick(details.name)}
+                      className="movies-list-moviename-name"
+                    >
                       {details.name}
-                    </li>
+                    </Link>
                     <li className="movies-list-moviename-genre">
                       <span>{details.genre[0]}</span>
                       <span>{details.genre[1]}</span>
                     </li>
                   </ul>
-                  <ul className="movies-list-movietime">{elem.time}</ul>
+                  <Link
+                    to={"/bookingtickets"}
+                    className="movies-list-movietime"
+                    onClick={() => handleclick(details.name)}
+                  >
+                    {elem.time}
+                  </Link>
                 </div>
               ))}
           </div>

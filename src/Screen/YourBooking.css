@@ -1,0 +1,44 @@
+.your-booking-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.your-booking-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  background-color: aliceblue;
+  height: 3rem;
+}
+.ticket-list {
+  display: flex;
+  justify-content: center;
+  background-color: seashell;
+  border-radius: 3px;
+  margin: 10px;
+  width: 95dvw;
+  height: 84dvh;
+}
+.your-booking-header a svg {
+  position: absolute;
+  left: 10px;
+}
+.your-booking-header a {
+  display: flex;
+  align-items: center;
+}
+.your-booking-ticket-container {
+  background-color: white;
+  font-size: 0.9rem;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 3px;
+}
+.your-booking-cinemaname {
+  margin: 5px 5px 0 0;
+}
+.your-booking-moviename {
+}
