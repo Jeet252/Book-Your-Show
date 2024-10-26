@@ -7,7 +7,7 @@ import cinemaDetails from "../Data/cinemaDetails";
 
 export default function Cinemas() {
   const { setForBooking } = useContext(dataContext);
-  const movie = JSON.parse(localStorage.getItem("Movie-Detail"));
+  const movie = JSON.parse(sessionStorage.getItem("Movie-Detail"));
   const cinema = cinemaDetails.filter((elem) =>
     JSON.stringify(elem.show).includes(movie.name)
   );

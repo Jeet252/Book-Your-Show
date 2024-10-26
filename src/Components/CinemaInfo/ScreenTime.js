@@ -22,7 +22,7 @@ export default function ScreenTime({ timing, details, setForBooking }) {
         className="time-box"
         onClick={() => {
           setForBooking(details);
-          localStorage.setItem("Cinema-Detail", JSON.stringify(details));
+          sessionStorage.setItem("Cinema-Detail", JSON.stringify(details));
         }}
         onMouseEnter={() => setHover("flex")}
         onMouseLeave={() => setHover("none")}

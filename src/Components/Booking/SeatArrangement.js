@@ -26,7 +26,6 @@ export default function SeatArrangement({
       ticket.no_tickets >= ticket.selectedTickets &&
       e.target.style.backgroundColor === "green"
     ) {
-      console.log("i am els and working");
       const ticketNumber = {
         class: b,
         seat_no: String.fromCharCode(charcode + a) + c,

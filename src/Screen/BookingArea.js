@@ -7,7 +7,7 @@ import SeatArea from "../Components/Booking/SeatArea";
 import { Link } from "react-router-dom";
 
 export default function BookingArea() {
-  const Cinema_Details = JSON.parse(localStorage.getItem("Cinema-Detail"));
+  const Cinema_Details = JSON.parse(sessionStorage.getItem("Cinema-Detail"));
 
   const [ticket, setTicket] = useState({
     movieName: Cinema_Details.movieName,
@@ -20,7 +20,7 @@ export default function BookingArea() {
     ticket_no: [],
   });
   const handleclick = () => {
-    localStorage.setItem("Total-tickets", JSON.stringify(ticket));
+    sessionStorage.setItem("Total-tickets", JSON.stringify(ticket));
     alert("Your Ticket is Successfully Booked");
   };
   return (

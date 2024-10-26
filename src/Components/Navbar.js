@@ -10,7 +10,7 @@ import logo from "../assests/file.png";
 
 export default function Navbar() {
   const search_details = [...cinemaDetails, ...moviedetails];
-  const data = JSON.parse(localStorage.getItem("Total-tickets"));
+  const data = JSON.parse(sessionStorage.getItem("Total-tickets"));
   return (
     <nav className="navbar">
       <ul className="navbar-logo">

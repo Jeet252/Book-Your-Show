@@ -7,11 +7,11 @@ import { IoFastFoodOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 export default function Thaters() {
-  const thaterDetails = JSON.parse(localStorage.getItem("Thater-info"));
+  const thaterDetails = JSON.parse(sessionStorage.getItem("Thater-info"));
 
   const handleclick = (a) => {
     const cinemaDetails = { ...thaterDetails, movieName: a };
-    localStorage.setItem("Cinema-Detail", JSON.stringify(cinemaDetails));
+    sessionStorage.setItem("Cinema-Detail", JSON.stringify(cinemaDetails));
   };
   return (
     <div className="thaters-container">

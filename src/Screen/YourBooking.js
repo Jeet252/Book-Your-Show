@@ -3,7 +3,7 @@ import "./YourBooking.css";
 import { Link } from "react-router-dom";
 
 export default function YourBooking() {
-  const tickets = JSON.parse(localStorage.getItem("Total-tickets"));
+  const tickets = JSON.parse(sessionStorage.getItem("Total-tickets"));
   return (
     <div className="your-booking-container">
       <header className="your-booking-header">

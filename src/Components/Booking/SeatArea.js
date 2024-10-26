@@ -3,7 +3,7 @@ import "./SeatArea.css";
 import SeatArrangement from "./SeatArrangement";
 
 export default function SeatArea({ setTicket, ticket }) {
-  const details = JSON.parse(localStorage.getItem("Cinema-Detail"));
+  const details = JSON.parse(sessionStorage.getItem("Cinema-Detail"));
 
   return (
     <div className="seatarea-container">

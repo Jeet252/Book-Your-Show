@@ -8,7 +8,7 @@ export default function Card({ name }) {
   const { setMovieData } = useContext(dataContext);
   const handleClick = () => {
     setMovieData(name);
-    localStorage.setItem("Movie-Detail", JSON.stringify(name));
+    sessionStorage.setItem("Movie-Detail", JSON.stringify(name));
   };
 
   return (
