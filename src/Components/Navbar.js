@@ -25,7 +25,9 @@ export default function Navbar() {
         <Link to={""} className="navbar-yourbooking">
           <TiTicket />
           Your Booking
-          <li className="navbar-yourbooking-no">{data.ticket_no.length}</li>
+          <li className="navbar-yourbooking-no">
+            {data === null ? 0 : data.ticket_no.length}
+          </li>
         </Link>
       </ul>
     </nav>

@@ -8,11 +8,13 @@ export default function Searchbar({ searchDetails }) {
   const [result, setResult] = useState([]);
 
   useEffect(() => {
-    const details = searchDetails.filter((user) => {
-      return user && user.name && user.name.toLowerCase().includes(input);
-    });
-
-    input === "" ? setResult([]) : setResult(details);
+    const timer = setTimeout(() => {
+      const details = searchDetails.filter((user) => {
+        return user && user.name && user.name.toLowerCase().includes(input);
+      });
+      input === "" ? setResult([]) : setResult(details);
+    }, 300);
+    return () => clearTimeout(timer);
   }, [input, searchDetails]);
 
   return (
