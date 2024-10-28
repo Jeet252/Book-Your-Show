@@ -1,13 +1,9 @@
-import React, { useContext } from "react";
 import "./Card.css";
 import { Star1 } from "iconsax-react";
 import { Link } from "react-router-dom";
-import dataContext from "../Context/dataContext";
 
 export default function Card({ name }) {
-  const { setMovieData } = useContext(dataContext);
   const handleClick = () => {
-    setMovieData(name);
     sessionStorage.setItem("Movie-Detail", JSON.stringify(name));
   };
 

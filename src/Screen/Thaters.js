@@ -1,14 +1,19 @@
 import "./Thaters.css";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import data from "../Data/moviesDetails";
+// import data from "../Data/moviesDetails";
 import { FaMobileAlt } from "react-icons/fa";
 import { IoFastFoodOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Thaters() {
+  const [data, setData] = useState([]);
   const thaterDetails = JSON.parse(sessionStorage.getItem("Thater-info"));
-
+  useEffect(() => {
+    axios.get("http://localhost:5000/movie").then((res) => setData(res.data));
+  });
   const handleclick = (a) => {
     const cinemaDetails = { ...thaterDetails, movieName: a };
     sessionStorage.setItem("Cinema-Detail", JSON.stringify(cinemaDetails));

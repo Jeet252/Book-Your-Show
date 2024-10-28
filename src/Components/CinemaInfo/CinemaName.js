@@ -6,8 +6,7 @@ import { IoFastFoodOutline } from "react-icons/io5";
 
 export default function CinemaName({
   cinemaDetails,
-  movieName,
-  setForBooking,
+  movieName
 }) {
   const timing = cinemaDetails.show.filter(
     (elem) => elem.movieName === movieName
@@ -37,7 +36,6 @@ export default function CinemaName({
           key={index}
           timing={elem}
           details={details}
-          setForBooking={setForBooking}
         />
       ))}
     </div>

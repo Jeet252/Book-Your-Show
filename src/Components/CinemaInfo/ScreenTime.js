@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./ScreenTime.css";
 import { Link } from "react-router-dom";
 
-export default function ScreenTime({ timing, details, setForBooking }) {
+export default function ScreenTime({ timing, details }) {
   const [hover, setHover] = useState("none");
   return (
     <div className="time-container">
@@ -21,7 +21,6 @@ export default function ScreenTime({ timing, details, setForBooking }) {
         to="/bookingtickets"
         className="time-box"
         onClick={() => {
-          setForBooking(details);
           sessionStorage.setItem("Cinema-Detail", JSON.stringify(details));
         }}
         onMouseEnter={() => setHover("flex")}

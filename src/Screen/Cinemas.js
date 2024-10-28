@@ -1,16 +1,21 @@
-import React, { useContext } from "react";
+import React, { useEffect, useState } from "react";
 import "./Cinemas.css";
 import Navbar from "../Components/Navbar";
 import CinemaName from "../Components/CinemaInfo/CinemaName";
-import dataContext from "../Context/dataContext";
-import cinemaDetails from "../Data/cinemaDetails";
+import axios from "axios";
+// import cinemaDetails from "../Data/cinemaDetails";
 
 export default function Cinemas() {
-  const { setForBooking } = useContext(dataContext);
+  const [cinemaDetails,setCinemaDetails]=useState([]);
   const movie = JSON.parse(sessionStorage.getItem("Movie-Detail"));
-  const cinema = cinemaDetails.filter((elem) =>
-    JSON.stringify(elem.show).includes(movie.name)
-  );
+  useEffect(()=>{
+    axios
+        .get("http://localhost:5000/cinema")
+        .then((res)=>setCinemaDetails(res.data.filter((elem) =>JSON.stringify(elem.show).includes(movie.name)
+    
+  )))
+  })
+  const cinema = cinemaDetails;
 
   return (
     <div>
@@ -27,7 +32,6 @@ export default function Cinemas() {
           key={index}
           cinemaDetails={elem}
           movieName={movie.name}
-          setForBooking={setForBooking}
         />
       ))}
     </div>
