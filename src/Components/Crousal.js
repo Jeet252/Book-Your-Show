@@ -6,9 +6,7 @@ export default function Crousal({ moviesDetails }) {
   const [display, setDisplay] = useState(0);
   useEffect(() => {
     const imageChange = setTimeout(() => {
-      display === moviesDetails.length - 1
-        ? setDisplay(0)
-        : setDisplay(display + 1);
+      setDisplay((a) => (a === moviesDetails.length - 1 ? 0 : a + 1));
     }, 2000);
     return () => clearTimeout(imageChange);
   });

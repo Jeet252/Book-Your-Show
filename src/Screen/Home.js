@@ -36,7 +36,7 @@ export default function Home() {
     axios
       .get("http://localhost:5000/movie")
       .then((res) => setMoviesDetails(res.data));
-  });
+  }, []);
   return (
     <div>
       <Navbar />

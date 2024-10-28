@@ -49,6 +49,8 @@
 }
 .banner-btn a {
   color: white;
+
+  padding: 13px 42px;
   text-decoration: none;
 }
 .banner-btn:hover {
