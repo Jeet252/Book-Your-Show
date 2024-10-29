@@ -1,0 +1,32 @@
+.simmer-header {
+  margin: 1pc 4pc;
+  position: relative;
+  background-color: grey;
+  border-radius: 20px;
+  height: 3rem;
+  overflow: hidden;
+}
+.simmer-header-effect {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: header-loading 2s infinite;
+}
+.simmer-header-effect div {
+  height: 100%;
+  width: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: skewX(-20deg);
+}
+@keyframes header-loading {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

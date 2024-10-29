@@ -1,0 +1,56 @@
+.simmer-card {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.simmer-card-img {
+  border-radius: 20px;
+  border-radius: 20px;
+  width: 14rem;
+  height: 352px;
+  background-color: grey;
+}
+.simmer-card-moviename {
+  width: 95%;
+  height: 1rem;
+  border-radius: 20px;
+  margin: 3px;
+  border-radius: 20px;
+  background-color: grey;
+}
+.simmer-genre {
+  display: flex;
+}
+.simmer-genres {
+  margin: 3px;
+  height: 1rem;
+  width: 5rem;
+  border-radius: 20px;
+  background-color: grey;
+}
+
+/* effect */
+.simmer-card-effect {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: loading 2s infinite;
+}
+.simmer-card-effect div {
+  height: 100%;
+  width: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: skewX(-20deg);
+}
+@keyframes loading {
+  0% {
+    transform: translateX(-150%);
+  }
+
+  100% {
+    transform: translateX(150%);
+  }
+}

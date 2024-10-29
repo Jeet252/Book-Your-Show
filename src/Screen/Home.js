@@ -6,9 +6,13 @@ import Card from "../Components/Card";
 import { ArrowRight2, ArrowLeft2 } from "iconsax-react";
 import Footer from "../Components/Footer";
 import axios from "axios";
+import SimmerCrousal from "../Components/Simmer/SimmerCrousal";
+import SimmerHeader from "../Components/Simmer/SimmerHeader";
+import SimmerSlider from "../Components/Simmer/SimmerSlider";
 
 export default function Home() {
   const [moviesDetails, setMoviesDetails] = useState([]);
+  const [isloading, setIsLoading] = useState(true);
   const [translate, setTranslate] = useState({
     time: 0,
     transition: 0,
@@ -33,16 +37,27 @@ export default function Home() {
     }
   };
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/movie")
-      .then((res) => setMoviesDetails(res.data));
+    axios.get("http://localhost:5000/movie").then((res) => {
+      setMoviesDetails(res.data);
+      setIsLoading(false);
+    });
   }, []);
+
   return (
     <div>
       <Navbar />
-      <Crousal moviesDetails={moviesDetails} />
+
+      {isloading ? (
+        <SimmerCrousal />
+      ) : (
+        <Crousal moviesDetails={moviesDetails} />
+      )}
       <section className="items-container">
-        <h2 className="home-text">Recomended Movies</h2>
+        {isloading ? (
+          <SimmerHeader />
+        ) : (
+          <h2 className="home-text">Recomended Movies</h2>
+        )}
         <button
           style={{ display: translate.time === 0 ? "none" : "inline-flex" }}
           className="movies-container-left-btn"
@@ -51,14 +66,18 @@ export default function Home() {
           <ArrowLeft2 size="32" color="black" />
         </button>
         <div className="movie-container">
-          <div
-            className="cards-container"
-            style={{ translate: translate.transition + "%" }}
-          >
-            {moviesDetails.map((elem, i) => (
-              <Card key={i} name={elem} />
-            ))}
-          </div>
+          {isloading ? (
+            <SimmerSlider />
+          ) : (
+            <div
+              className="cards-container"
+              style={{ translate: translate.transition + "%" }}
+            >
+              {moviesDetails.map((elem, i) => (
+                <Card key={i} name={elem} />
+              ))}
+            </div>
+          )}
         </div>
         <button
           style={{ display: translate.time === 2 ? "none" : "inline-flex" }}
