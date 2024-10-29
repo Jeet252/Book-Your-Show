@@ -6,7 +6,7 @@
   margin: 20px 100px;
   display: flex;
 }
-.booking-header li {
+.booking-header-li {
   list-style: none;
   height: 2.25rem;
   width: 5rem;
@@ -18,6 +18,10 @@
   color: green;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.486);
+}
+.booking-header-li:hover {
+  color: white !important;
+  background-color: green !important;
 }
 .b-h-hr {
   color: rgb(0 0 0 / 50%);

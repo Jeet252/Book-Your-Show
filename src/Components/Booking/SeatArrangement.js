@@ -5,6 +5,7 @@ export default function SeatArrangement({
   charcode,
   setTicket,
   ticket,
+  isavailable,
 }) {
   const handleSelected = (e, a, b, c) => {
     if (
@@ -57,6 +58,11 @@ export default function SeatArrangement({
                   className="seat-btn"
                   key={items}
                   onClick={(e) => handleSelected(e, i, details.class, items)}
+                  disabled={isavailable.some(
+                    (no) =>
+                      no.class === details.class &&
+                      no.seat_no === String.fromCharCode(charcode + i) + items
+                  )}
                 >
                   {items}
                 </button>

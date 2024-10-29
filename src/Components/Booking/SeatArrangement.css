@@ -35,6 +35,13 @@
   background-color: rgba(255, 255, 255, 0.5);
 }
 .seat-btn:hover {
-  background-color: rgba(0, 128, 0, 0.7);
-  color: rgb(255, 255, 255);
+  background-color: rgba(0, 128, 0, 0.7) !important;
+  color: rgb(255, 255, 255) !important;
+}
+.seat-btn:disabled,
+.seat-btn:disabled:hover {
+  background-color: rgba(220, 220, 220, 0.5);
+  border-color: rgba(128, 128, 128, 0.5);
+
+  color: rgba(145, 137, 137, 0.5);
 }
