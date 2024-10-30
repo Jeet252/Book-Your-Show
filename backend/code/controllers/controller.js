@@ -1,6 +1,7 @@
 const { MongoClient } = require("mongodb");
 const uri = process.env.MONGODB_URI;
 const tickets = require("../mongodb_server/schema");
+const UserDetails = require("../mongodb_server/userSchema");
 const client = new MongoClient(uri);
 
 const movie = async (req, res) => {
@@ -25,7 +26,6 @@ const cinema = async (req, res) => {
     console.log(error);
   }
 };
-
 const ticketdata = async (req, res) => {
   try {
     const { movieName, cinemaName, date, show, ticket_no } = req.body;
@@ -54,4 +54,36 @@ const sendticketdata = async (req, res) => {
     console.log(error);
   }
 };
-module.exports = { movie, cinema, ticketdata, sendticketdata };
+const signup = async (req, res) => {
+  try {
+    const { username, email, password, phone_no } = req.body;
+    const userCreated = await UserDetails.create({
+      username,
+      email,
+      password,
+      phone_no,
+    });
+    res.status(201).json({
+      msg: "ticket is successfull created",
+      userId: userCreated.username.toString(),
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+const login = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    const userExist = await UserDetails.findOne({
+      email: email,
+      password: password,
+    });
+    res.status(201).json({
+      msg: "You are logged in successfully",
+      userId: userExist.username.toString(),
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+module.exports = { movie, cinema, ticketdata, sendticketdata, signup, login };
