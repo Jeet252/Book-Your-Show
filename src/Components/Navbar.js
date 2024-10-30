@@ -1,7 +1,7 @@
 import "./Navbar.css";
 import Searchbar from "./SearchComponent/Searchbar";
 import { TiTicket } from "react-icons/ti";
-import { FaHome } from "react-icons/fa";
+import { FaHome, FaUserPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from "../assests/file.png";
 import { useState } from "react";
@@ -72,7 +72,10 @@ export default function Navbar() {
           <FaHome />
           Home
         </Link>
-        <li onClick={() => setSignup(true)}>Sign up</li>
+        <li onClick={() => setSignup(true)}>
+          <FaUserPlus />
+          Sign up
+        </li>
         <Link to={""} className="navbar-yourbooking">
           <TiTicket />
           Your Booking

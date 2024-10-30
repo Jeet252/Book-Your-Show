@@ -59,7 +59,9 @@
   opacity: 0.5;
 }
 .t-c-li {
+  display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .t-c-li-price {
   font-size: 0.9rem;

@@ -73,7 +73,11 @@ export default function BookingArea() {
         isavailable={isavailable}
       />
 
-      <TicketCounter setTicket={setTicket} ticket={ticket} />
+      <TicketCounter
+        setTicket={setTicket}
+        ticket={ticket}
+        show={Cinema_Details.show}
+      />
       <div
         className="booking-bottom"
         style={{
