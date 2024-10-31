@@ -10,6 +10,9 @@ import axios from "axios";
 
 export default function Navbar() {
   const data = JSON.parse(sessionStorage.getItem("Total-tickets"));
+  const [loading, setLoading] = useState(false);
+  const [errors, setError] = useState(false);
+  const [username, setUsername] = useState();
   const [values, setValues] = useState({
     username: "",
     email: "",
@@ -27,45 +30,67 @@ export default function Navbar() {
       [name]: value,
     });
   };
+  const fetch_data = async () => {
+    try {
+      setLoading(true);
+      const respond = await axios({
+        method: "post",
+        headers: "application/json",
+        url: "http://localhost:5000/login",
+        data: {
+          email: values.email,
+          password: values.password,
+        },
+      });
+      alert("You are logged in");
+      setUsername(respond.data.user.username);
+      console.log(respond);
+      setError(false);
+    } catch (error) {
+      setError([error]);
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+  const send_data = async () => {
+    try {
+      setLoading(true);
+      const respond = await axios({
+        method: "post",
+        headers: "application/json",
+        url: "http://localhost:5000/signup",
+        data: {
+          username: values.username,
+          email: values.email,
+          password: values.password,
+          phone_no: values.phone_no,
+        },
+      });
+      alert("You are sign in");
+      setUsername(respond.data);
+      setSignup(false);
+      console.log(respond);
+      setError(false);
+    } catch (error) {
+      setError([error]);
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  };
   const handleLogin = () => {
-    axios({
-      method: "post",
-      headers: "application/json",
-      url: "http://localhost:5000/login",
-      data: {
-        email: values.email,
-        password: values.password,
-      },
-    }).then((res) => {
-      if (res.status === 201) {
-        alert("You are logged in");
-        setLogin(false);
-      }
-    });
+    fetch_data();
   };
   const handleSignup = () => {
-    axios({
-      method: "post",
-      headers: "application/json",
-      url: "http://localhost:5000/signup",
-      data: {
-        username: values.username,
-        email: values.email,
-        password: values.password,
-        phone_no: values.phone_no,
-      },
-    }).then((res) => {
-      if (res.status === 201) {
-        alert("You are sign in");
-        setSignup(false);
-      }
-    });
+    send_data();
   };
   return (
     <nav className="navbar">
       <ul className="navbar-logo">
         <img src={logo} alt="" />
       </ul>
+      {username && <ul>{username}</ul>}
       <Searchbar />
       <ul className="navbar-ul-element">
         <Link to={"/Book-Your-Show"} className="navbar-home">
@@ -124,7 +149,7 @@ export default function Navbar() {
             <Link> Privacy Policy</Link>
           </li>
           <button className="signup-btn" onClick={handleSignup}>
-            Sign Up
+            {loading ? "Loading" : "Sign Up"}
           </button>
           <span>
             Already have account?{" "}
@@ -170,9 +195,13 @@ export default function Navbar() {
             I agree to <Link>Terms & Condition</Link> &
             <Link> Privacy Policy</Link>
           </li>
+
+          {errors && <li>Invalid Credentials</li>}
+
           <button className="login-btn" onClick={handleLogin}>
-            Login
+            {loading ? "loading" : "Login"}
           </button>
+
           <span>
             Not have account?{" "}
             <span

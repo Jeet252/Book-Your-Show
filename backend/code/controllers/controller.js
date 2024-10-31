@@ -1,4 +1,5 @@
 const { MongoClient } = require("mongodb");
+const bcrypt = require("bcrypt");
 const uri = process.env.MONGODB_URI;
 const tickets = require("../mongodb_server/schema");
 const UserDetails = require("../mongodb_server/userSchema");
@@ -76,12 +77,18 @@ const login = async (req, res) => {
     const { email, password } = req.body;
     const userExist = await UserDetails.findOne({
       email: email,
-      password: password,
     });
-    res.status(201).json({
-      msg: "You are logged in successfully",
-      userId: userExist.username.toString(),
-    });
+    if (userExist) {
+      const user = await userExist.comparePassword(password);
+
+      if (user) {
+        res.status(200).json({ status: "successful", user: userExist });
+      } else {
+        res.status(401).json({ messsage: "this Invalid email or password" });
+      }
+    } else {
+      res.status(401).json({ messsage: "Invalid email or password" });
+    }
   } catch (error) {
     console.log(error);
   }
