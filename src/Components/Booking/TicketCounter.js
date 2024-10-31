@@ -3,7 +3,6 @@ import "./TicketCounter.css";
 import seat from "./seat";
 
 export default function TicketCounter({ setTicket, ticket, show }) {
-  console.log(show);
   const [hover, setHover] = useState({
     clicked: 3,
     hovered: 0,

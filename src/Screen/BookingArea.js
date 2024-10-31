@@ -40,17 +40,24 @@ export default function BookingArea() {
     });
   };
   useEffect(() => {
-    axios.get("http://localhost:5000/sendticketdata").then((res) => {
-      const ticketshow = res.data
-        .filter(
-          (elem) =>
-            elem.movieName === Cinema_Details.movieName &&
-            elem.cinemaName === Cinema_Details.name &&
-            elem.show === ticket.show
-        )
-        .map((items) => items.ticket_no);
-      setIsAvailble(ticketshow.flat());
-    });
+    (async () => {
+      try {
+        const responce = await axios.get(
+          "http://localhost:5000/sendticketdata"
+        );
+        const ticketshow = responce.data
+          .filter(
+            (elem) =>
+              elem.movieName === Cinema_Details.movieName &&
+              elem.cinemaName === Cinema_Details.name &&
+              elem.show === ticket.show
+          )
+          .map((items) => items.ticket_no);
+        setIsAvailble(ticketshow.flat());
+      } catch (error) {
+        console.log(error);
+      }
+    })();
   }, [ticket.show, Cinema_Details.movieName, Cinema_Details.name]);
   return (
     <div className="booking-area-container">

@@ -6,16 +6,23 @@ import axios from "axios";
 // import cinemaDetails from "../Data/cinemaDetails";
 
 export default function Cinemas() {
-  const [cinemaDetails,setCinemaDetails]=useState([]);
+  const [cinemaDetails, setCinemaDetails] = useState([]);
   const movie = JSON.parse(sessionStorage.getItem("Movie-Detail"));
-  useEffect(()=>{
-    axios
-        .get("http://localhost:5000/cinema")
-        .then((res)=>setCinemaDetails(res.data.filter((elem) =>JSON.stringify(elem.show).includes(movie.name)
-    
-  )))
-  })
-  const cinema = cinemaDetails;
+  useEffect(() => {
+    (async () => {
+      try {
+        const responce = await axios.get("http://localhost:5000/cinema");
+        setCinemaDetails(
+          responce.data.filter((elem) =>
+            JSON.stringify(elem.show).includes(movie.name)
+          )
+        );
+        console.log("object");
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+  }, [movie.name]);
 
   return (
     <div>
@@ -27,12 +34,8 @@ export default function Cinemas() {
         <span className="cinema-section-genre">Genre</span>
         <span className="cinema-section-genre">Genre</span>
       </div>
-      {cinema.map((elem, index) => (
-        <CinemaName
-          key={index}
-          cinemaDetails={elem}
-          movieName={movie.name}
-        />
+      {cinemaDetails.map((elem, index) => (
+        <CinemaName key={index} cinemaDetails={elem} movieName={movie.name} />
       ))}
     </div>
   );

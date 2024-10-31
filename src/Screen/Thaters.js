@@ -12,8 +12,15 @@ export default function Thaters() {
   const [data, setData] = useState([]);
   const thaterDetails = JSON.parse(sessionStorage.getItem("Thater-info"));
   useEffect(() => {
-    axios.get("http://localhost:5000/movie").then((res) => setData(res.data));
-  });
+    (async () => {
+      try {
+        const responce = await axios.get("http://localhost:5000/movie");
+        setData(responce.data);
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+  }, []);
   const handleclick = (a) => {
     const cinemaDetails = { ...thaterDetails, movieName: a };
     sessionStorage.setItem("Cinema-Detail", JSON.stringify(cinemaDetails));

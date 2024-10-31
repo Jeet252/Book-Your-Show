@@ -37,10 +37,15 @@ export default function Home() {
     }
   };
   useEffect(() => {
-    axios.get("http://localhost:5000/movie").then((res) => {
-      setMoviesDetails(res.data);
-      setIsLoading(false);
-    });
+    (async () => {
+      try {
+        const responce = await axios.get("http://localhost:5000/movie");
+        setMoviesDetails(responce.data);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
+    })();
   }, []);
 
   return (
