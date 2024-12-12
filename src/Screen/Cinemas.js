@@ -17,7 +17,6 @@ export default function Cinemas() {
             JSON.stringify(elem.show).includes(movie.name)
           )
         );
-        console.log("object");
       } catch (error) {
         console.log(error);
       }

@@ -1,5 +1,4 @@
 const { MongoClient } = require("mongodb");
-const bcrypt = require("bcrypt");
 const uri = process.env.MONGODB_URI;
 const tickets = require("../mongodb_server/schema");
 const UserDetails = require("../mongodb_server/userSchema");

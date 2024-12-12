@@ -6,9 +6,7 @@ export default function BookingHeader({ details, setTicket, ticket }) {
 
   const handleclick = (e) => {
     if (ticket.show !== e.target.textContent) {
-      console.log(e.target.id);
       setActiveIndex((pre) => (pre = e.target.id));
-      console.log(activeIndex);
       setTicket({ ...ticket, show: e.target.textContent });
     }
   };
